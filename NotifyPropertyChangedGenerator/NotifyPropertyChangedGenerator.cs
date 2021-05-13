@@ -38,15 +38,14 @@ namespace NotifyPropertyChangedGenerator
         {
           var source = GeneratePropertyChanged(typeSymbol);
           //context.AddSource($"{typeSymbol.Name}.Notify.cs", source);
-          context.AddSource($"{typeSymbol.Name}.Notify3.cs", source); 
+          context.AddSource($"{typeSymbol.Name}.Notify.cs", source); 
         }
       }
     }
 
     private string GeneratePropertyChanged(ITypeSymbol typeSymbol)
     {
-      return $@"
-    using System.ComponentModel;
+      return $@"using System.ComponentModel;
     using System;
 
 namespace {typeSymbol.ContainingNamespace}

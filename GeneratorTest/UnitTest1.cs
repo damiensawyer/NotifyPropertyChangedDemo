@@ -40,8 +40,8 @@ namespace NotifyPropertyChangedDemo
 
       var generatedText = newFile.GetText().ToString();
 
-      var expectedOutput = @"
-using System.ComponentModel;
+      var expectedOutput = @"using System.ComponentModel;
+    using System;
 
 namespace NotifyPropertyChangedDemo
 {
@@ -53,6 +53,7 @@ namespace NotifyPropertyChangedDemo
       get => IndexBackingField;
       set
       {
+        Console.WriteLine(""hello world 123"");
         IndexBackingField = value;
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Index)));
       }
