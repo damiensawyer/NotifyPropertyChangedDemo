@@ -1,3 +1,12 @@
+
+# Damien Notes
+- [Got from this talk] (https://www.youtube.com/watch?v=bBpFpr-Votk&t=632s&ab_channel=JetBrainsTV)
+- https://github.com/damiensawyer/NotifyPropertyChangedDemo
+- The output file was created C:\Users\Damien\AppData\Local\Temp\RiderSourceGeneratedDocuments\1290A9BDF7DA2DF7E38442C0\NotifyPropertyChangedGenerator\NotifyPropertyChangedGenerator.NotifyPropertyChangedGenerator\CarModel.Notify6.cs
+- Using Rider, I made changes to NotifyPropertyChangedGenerator.cs and saved it (changed the output file name). I then changed a property name on CarModel.cs. If I went to the class name of CarModel and hit f12, Rider opened up the new (generated) file. What was interesting was that the file didn't appear in the Windows explorer until I'd opened it in Rider. I guess it's cached. 
+
+All in all. This is cool!! 
+
 # NotifyPropertyChangedDemo
 Demo generator implementing INotifyPropertyChanged based on naming conventions
 

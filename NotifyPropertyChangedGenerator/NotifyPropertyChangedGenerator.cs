@@ -35,7 +35,8 @@ namespace NotifyPropertyChangedGenerator
         foreach (var typeSymbol in immutableHashSet)
         {
           var source = GeneratePropertyChanged(typeSymbol);
-          context.AddSource($"{typeSymbol.Name}.Notify.cs", source);
+          //context.AddSource($"{typeSymbol.Name}.Notify.cs", source);
+          context.AddSource($"{typeSymbol.Name}.Notify3.cs", source); 
         }
       }
     }
