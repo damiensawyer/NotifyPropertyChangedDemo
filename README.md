@@ -7,6 +7,7 @@
 - Search for "Debugger.Launch()" and see comments.
 - In his video he put a breakpoint in the generated file and it worked (Visual Studio). This didn't work for me in Rider, however if I stepped into the file with the debugger I found myself in another file - C:\Users\Damien\AppData\Local\Temp\RiderDebuggerEmbeddedSources\51DB8F1B2139197035F6E1FC\NotifyPropertyChangedGenerator\NotifyPropertyChangedGenerator.NotifyPropertyChangedGenerator\CarModel.Notify3.cs and the debugging worked. 
 - After I changed a generator (see "hello world 123") I either had to clean the solution or make a change to the CarModel class. 
+- Note that there's a unit test in there. TDD is probably the best way to build generators. 
 
 All in all. This is cool!! 
 
