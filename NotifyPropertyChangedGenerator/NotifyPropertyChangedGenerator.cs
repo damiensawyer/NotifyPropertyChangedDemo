@@ -16,8 +16,10 @@ namespace NotifyPropertyChangedGenerator
 
     public void Execute(GeneratorExecutionContext context)
     {
+      // Debugger.Launch(); // If I comment this out, next time you compile you're prompted to attach a debugger. I attached Visual Studio, not Rider. 
+      
       // uncomment to debug the actual build of the target project
-      // Debugger.Launch();
+      //Debugger.Launch();
       var compilation = context.Compilation;
       var notifyInterface = compilation.GetTypeByMetadataName("System.ComponentModel.INotifyPropertyChanged");
 
@@ -44,7 +46,8 @@ namespace NotifyPropertyChangedGenerator
     private string GeneratePropertyChanged(ITypeSymbol typeSymbol)
     {
       return $@"
-using System.ComponentModel;
+    using System.ComponentModel;
+    using System;
 
 namespace {typeSymbol.ContainingNamespace}
 {{
@@ -71,6 +74,7 @@ namespace {typeSymbol.ContainingNamespace}
       get => {fieldSymbol.Name};
       set
       {{
+        Console.WriteLine(""hello world 123"");
         {fieldSymbol.Name} = value;
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof({propertyName})));
       }}

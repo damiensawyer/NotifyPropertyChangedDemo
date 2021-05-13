@@ -8,6 +8,7 @@ namespace NotifyPropertyChangedLiveDemo
     private int NumberOfDoorsBackingField;
     private string ModelBackingField = "";
     private string DamienName3BackingField = "";
+    private string DamienName4BackingField = "";
     
     
 
